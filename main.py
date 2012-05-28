@@ -137,7 +137,7 @@ class Rot13Handler(webapp2.RequestHandler):
         self.response.out.write(rot13code % {"input": text})
         
     def rot13(self,text):
-        return text;
+        return escape_html(text.encode('rot13'));
     
     def get(self):
         self.write_rot(self.request.get('text') );
@@ -150,3 +150,4 @@ app = webapp2.WSGIApplication([('/', MainHandler),
                                ('/unit2/rot13', Rot13Handler)
                                ], 
                                debug=True)
+
