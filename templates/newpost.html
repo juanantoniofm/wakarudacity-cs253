@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Wakarudacity CS253 Singalong Blog</title>
+  </head>
+  <body>
+    <form method="post">
+    <label> Asunto:
+    <input type="text" value="{{ subject }}" name="subject" >
+    </label>
+    <br>
+    
+    <textarea name="content" style="height: 100px; width: 400px;">---{{ content }}</textarea>
+    
+    <input type="submit" id="submitbutton" >
+    </form>
+    <div id="error" style="color:red"> {{ error }} </div>
+  </body>
+</html>

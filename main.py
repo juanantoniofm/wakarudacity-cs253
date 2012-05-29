@@ -39,7 +39,7 @@ class MainHandler(webapp2.RequestHandler):
 
 app = webapp2.WSGIApplication([('/', mydates.DatesHandler),
                                ('/thanks', mydates.ThanksHandler),
-                               ('/unit3/blog', myblog.BlogHandler),
+                               ('/unit3/blog', myblog.BlogFront),
                                ('/unit3/blog/newpost', myblog.NewPostHandler),
                                ('/unit3/blog/([0-9]+)', myblog.PostHandler),
                                ('/unit2/rot13', myrot13.Rot13Handler)

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Wakarudacity CS253 Singalong Blog</title>
+  </head>
+  <body>
+  <h1>Wakarudacity CS253 Singalong Blog</h1>
+  <h1 class="error">{{ error }} </h1>
+  {%- for p in posts %}
+    {{ p._render_text | safe }}
+  {%- endfor %}
+  <div id="debug">
+  <hr>
+  {{ texto }}
+  </div>
+  </body>
+</html>
